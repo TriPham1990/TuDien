@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Từ điển</title>
+</head>
+<body>
+<script>
+    let arrayEnglish = ["Hello", "Yes", "No", "Ok", "Thank", "Love",];
+    let arrayVietnamese = ["Xin chào", "Đúng", "Không", "Cám ơn", "Yêu"];
+    let input = prompt();
+    let keyword = [input[0].toUpperCase()];
+    for (let i = 1; i < input.length; i++) {
+        keyword.push(input[i].toLowerCase());
+    }
+    let x = arrayEnglish.indexOf(keyword.join(''));
+
+    if (x !== -1) {
+        alert(arrayVietnamese[x]);
+    } else {
+        alert("not found in the dictionary");
+    }
+</script>
+</body>
+</html>
